@@ -9,13 +9,13 @@
     <meta name="description" content="Mouldifi - A fully responsive, HTML5 based admin theme">
     <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, Mouldifi, web design, CSS3">
     <title>LN's Test Online | Home</title>
-    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
-    <link href="css/entypo.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/mouldifi-core.css" rel="stylesheet">
-    <link href="css/mouldifi-forms.css" rel="stylesheet">
-    <link href="css/my-css.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='../images/favicon.ico' />
+    <link href="../css/entypo.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/mouldifi-core.css" rel="stylesheet">
+    <link href="../css/mouldifi-forms.css" rel="stylesheet">
+    <link href="../css/my-css.css" rel="stylesheet">
 
 </head>
 <body>
@@ -28,7 +28,7 @@
 
         <!-- Site header  -->
         <header class="site-header">
-            <div class="site-logo"><a href=""><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a></div>
+            <div class="site-logo"><a href=""><img src="../images/logo1.png" alt="Mouldifi" title="Mouldifi"></a></div>
             <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
             <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
         </header>
@@ -56,7 +56,7 @@
 
                 <!-- User info -->
                 <ul class="user-info pull-right">
-                    <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/face.png">Chào mừng Tina Phạm <span class="caret"></span></a>
+                    <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="../images/face.png">Chào mừng Tina Phạm <span class="caret"></span></a>
 
                         <!-- User action menu -->
                         <ul class="dropdown-menu pull-right">
@@ -75,7 +75,7 @@
         </div>
         <!-- /main header -->
 
-        <?php
+<?php
 
         $databaseHost = 'localhost';
         $databaseName = 'quiz';
@@ -86,7 +86,7 @@
         $result = mysqli_query($mysqli, "select * from questions where category_id=1 ORDER BY RAND()");
 
 
-        ?>
+?>
 
 
         <!-- Main content -->
@@ -94,91 +94,86 @@
             <h1 class="page-title"></h1>
 
             <form role="form" id='quiz_form' method="post" action="quiz-result.php">
-                <?php
-                $sttQues=1;
-                while($res = mysqli_fetch_array($result)) {
-                    echo '<div class="col-md-10 col-md-offset-1 question-box">
+				<?php
+                    $sttQues=1;
+                    while($res = mysqli_fetch_array($result)) {
+                        echo '<div class="col-md-10 col-md-offset-1 question-box">
                             <div class="icon-question">
-                                <img src="images/circle.png">
+                                <img src="../images/circle.png">
                                 <div class="question-number">
                                     <div class="question-number-box">
-                                        <p>'.$sttQues.'</p>
+                                        <p>' .$sttQues.'</p>
                                     </div>
                                 </div>
                             </div>';
 
-                    echo '<div class="panel panel-primary">
+                        echo '<div class="panel panel-primary">
                                 <div class="panel-heading clearfix question-text">
                                     <div class="panel-title">'.$res['question_name'].'</div>
                                     <ul class="panel-tool-options panel-tool-options-custom">
                                         <li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
                                     </ul>
                                 </div>';
-                    echo '<div class="panel-body panel-text">';
+                        echo '<div class="panel-body panel-text">';
 
-                    if(isset( $res['answer1'] ) && !empty( $res['answer1'] )){
-                        echo '<div class="radio radio-replace radio-primary">
+                        if(isset( $res['answer1'] ) && !empty( $res['answer1'] )){
+                                    echo '<div class="radio radio-replace radio-primary">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color" checked="checked">
                                         <label for="radio6">'.$res['answer1'].'</label>
                                     </div>';
-                    }
+                        }
 
-                    if(isset( $res['answer2'] ) && !empty( $res['answer2'] )){
-                        echo '<div class="radio radio-replace radio-success">
+                        if(isset( $res['answer2'] ) && !empty( $res['answer2'] )){
+                                    echo '<div class="radio radio-replace radio-success">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
                                         <label for="radio7">'.$res['answer2'].'</label>
                                     </div>';
-                    }
+                        }
 
-                    if(isset( $res['answer3'] ) && !empty( $res['answer3'] )) {
-                        echo '<div class="radio radio-replace radio-info">
+                        if(isset( $res['answer3'] ) && !empty( $res['answer3'] )) {
+                            echo '<div class="radio radio-replace radio-info">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
                                         <label for="radio8">' . $res['answer3'] . '</label>
                                     </div>';
-                    }
+                        }
 
-                    if(isset( $res['answer4'] ) && !empty( $res['answer4'] )){
-                        echo '<div class="radio radio-replace radio-warning">
+                        if(isset( $res['answer4'] ) && !empty( $res['answer4'] )){
+                                    echo '<div class="radio radio-replace radio-warning">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
                                         <label for="radio9">'.$res['answer4'].'</label>
                                     </div>';
-                    }
+                        }
 
-                    if(isset( $res['answer5'] ) && !empty( $res['answer5'] )) {
-                        echo '<div class="radio radio-replace radio-danger">
+                        if(isset( $res['answer5'] ) && !empty( $res['answer5'] )) {
+                            echo '<div class="radio radio-replace radio-danger">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
                                         <label for="radio10">'.$res['answer5'].'</label>
                                     </div>';
-                    }
-                    if(isset( $res['answer6'] ) && !empty( $res['answer6'] )){
-                        echo '<div class="radio radio-replace radio-primary">
+                        }
+                        if(isset( $res['answer6'] ) && !empty( $res['answer6'] )){
+                            echo '<div class="radio radio-replace radio-primary">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color" checked="checked">
                                         <label for="radio6">'.$res['answer6'].'</label>
                                     </div>';
-                    }
+                        }
 
-                    if(isset( $res['answer7'] ) && !empty( $res['answer7'] )){
-                        echo '<div class="radio radio-replace radio-success">
+                        if(isset( $res['answer7'] ) && !empty( $res['answer7'] )){
+                            echo '<div class="radio radio-replace radio-success">
                                         <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
                                         <label for="radio7">'.$res['answer7'].'</label>
                                     </div>';
-                    }
+                        }
 
-                    echo '
+                echo '
                         </div>
                     </div>
                 </div>';
                     $sttQues++;
-                }?>
-                <div class="col-md-10 col-md-offset-1">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
+                    }?>
             </form>
 
-
-
             <!-- Footer -->
-            <footer class="footer-main col-lg-10 footer-main-my">
+            <footer class="footer-main col-lg-10">
                 &copy; 2017 <strong>LN's test online</strong> Admin Theme by <a target="_blank" href="#/">Lam-na</a>
             </footer>
             <!-- /footer -->
@@ -192,22 +187,22 @@
 <!-- /page container -->
 
 <!--Load JQuery-->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metismenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/blockui-master/jquery-ui.js"></script>
-<script src="js/plugins/blockui-master/jquery.blockUI.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/plugins/metismenu/jquery.metisMenu.js"></script>
+<script src="../js/plugins/blockui-master/jquery-ui.js"></script>
+<script src="../js/plugins/blockui-master/jquery.blockUI.js"></script>
 <!--Float Charts-->
-<script src="js/plugins/flot/jquery.flot.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.resize.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.selection.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.time.min.js"></script>
-<script src="js/functions.js"></script>
+<script src="../js/plugins/flot/jquery.flot.min.js"></script>
+<script src="../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="../js/plugins/flot/jquery.flot.resize.min.js"></script>
+<script src="../js/plugins/flot/jquery.flot.selection.min.js"></script>
+<script src="../js/plugins/flot/jquery.flot.pie.min.js"></script>
+<script src="../js/plugins/flot/jquery.flot.time.min.js"></script>
+<script src="../js/functions.js"></script>
 
 <!--ChartJs-->
-<script src="js/plugins/chartjs/Chart.min.js"></script>
+<script src="../js/plugins/chartjs/Chart.min.js"></script>
 
 </body>
 </html>
