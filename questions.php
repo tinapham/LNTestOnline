@@ -135,7 +135,7 @@ background:#f5f5f5;
 		<div class="main-content">
 			<h1 class="page-title"></h1>
 
-			<form>
+			<form role="form" id='quiz_form' method="post" action="quiz-result.php">
 				<div class="col-md-10 col-md-offset-1 question-box">
 
 				<div class="icon-question">
