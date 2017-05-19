@@ -1,7 +1,21 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+ob_start();
+session_start();
+require_once 'config.php'; 
+?>
+<?php 
+	if(!empty($_POST)){
+		try {
+			$user_obj = new Cl_User();
+			$data = $user_obj->forgetPassword( $_POST );
+			if($data)$_SESSION['success'] = PASSWORD_RESET_SUCCESS;
+		} catch (Exception $e) {
+			$_SESSION['error'] = $e->getMessage();
+		}
+	}
+?>
 
-<!-- Mirrored from g-axon.com/mouldifi-3.0/light/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,14 +61,15 @@
 	<div class="login-content">
 		<h2>Forgot your password?</h2>
 		<p>Don't worry, we'll send you an email to reset your password.</p>
-		<form method="post" action="http://g-axon.com/mouldifi-3.0/light/index.html">                        
+		<form id="forgetpassword-form" class="form-register" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
 			<div class="form-group">
-				<input type="text" placeholder="Your Email" class="form-control">
+				<input id="email" name="email" type="email" class="form-control" placeholder="Email address">  
 			</div>  
 			<p>Don't remember your email? <a href="#">Contact Support</a>.</p>                      
 			<div class="form-group">
-				<button class="btn btn-primary btn-block">Reset Password</button>
+				<button id="forget_btn" class="btn btn-primary btn-block" type="submit">Reset Password</button>
 			</div>
+			<p class="text-center"><a href="index.php"><i class="fa fa-lock"></i> Sign in | </a><a href="register.php"><i class="fa fa-check"></i> Sign Up</a></p>  
 		</form>
 	</div>
 </div>
@@ -65,3 +80,4 @@
 
 <!-- Mirrored from g-axon.com/mouldifi-3.0/light/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
 </html>
+<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>    
