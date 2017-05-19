@@ -10,7 +10,7 @@ require_once 'messages.php';
 //define( 'BASE_PATH', 'http://localhost/php-quiz/');
 define( 'DB_HOST', 'localhost' );
 define( 'DB_USERNAME', 'root');
-define( 'DB_PASSWORD', 'root');
+define( 'DB_PASSWORD', '');
 define( 'DB_NAME', 'quiz');
 
 function __autoload($class)

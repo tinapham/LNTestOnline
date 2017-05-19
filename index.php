@@ -1,109 +1,103 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php 
+ob_start();
+session_start();
+require_once 'config.php'; 
+?>
+<?php 
+	if( !empty( $_POST )){
+		try {
+			$user_obj = new Cl_User();
+			$data = $user_obj->login( $_POST );
+			if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+				$_SESSION['success'] = 'You are logged in successfully';
+				header('Location: home.php');exit;
+			}
+		} catch (Exception $e) {
+			$error = $e->getMessage();
+			$_SESSION['error'] = $error;
+		}
+	}
+	//print_r($_SESSION);
+	if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+		header('Location: home.php');exit;
+	}
+?>
+
+<!-- Mirrored from g-axon.com/mouldifi-3.0/light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Mouldifi - A fully responsive, HTML5 based admin theme">
 <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, Mouldifi, web design, CSS3">
-<title>LN's Test Online | Home</title>
+<title>LN's Test Online | Login</title>
+<!-- Site favicon -->
 <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+<!-- /site favicon -->
+
+<!-- Entypo font stylesheet -->
 <link href="css/entypo.css" rel="stylesheet">
+<!-- /entypo font stylesheet -->
+
+<!-- Font awesome stylesheet -->
 <link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- /font awesome stylesheet -->
+
+<!-- Bootstrap stylesheet min version -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- /bootstrap stylesheet min version -->
+
+<!-- Mouldifi core stylesheet -->
 <link href="css/mouldifi-core.css" rel="stylesheet">
+<!-- /mouldifi core stylesheet -->
+
 <link href="css/mouldifi-forms.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+
+
 </head>
-<body>
-
-<!-- Page container -->
-<div class="page-container">
-
-	<!-- Page Sidebar -->
-	<div class="page-sidebar">
-	
-		<!-- Site header  -->
-		<header class="site-header">
-		  <div class="site-logo"><a href=""><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a></div>
-		  <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
-		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
-		</header>
-		<!-- /site header -->
-		
-		<!-- Main navigation -->
-		<ul id="side-nav" class="main-menu navbar-collapse collapse">
-			<li class=""><a href=""><i class="icon-home"></i><span class="title">Trang chủ</span></a>
-			</li>
-			<li class=""><a href=""><i class="icon-newspaper"></i><span class="title">Lịch sử thi</span></a>
-			</li>
-			<li class=""><a href=""><i class="icon-reply"></i><span class="title">Vào thi </span></a>
-			</li>
-		</ul>
-		<!-- /main navigation -->		
-  </div>
-  <!-- /page sidebar -->
-  
-  <!-- Main container -->
-  <div class="main-container gray-bg">
-  
-		<!-- Main header -->
-		<div class="main-header row">
-			  <div class="col-sm-12 col-xs-7">
-			  
-				<!-- User info -->
-				<ul class="user-info pull-right">          
-					  <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/face.png">Chào mừng Tina Phạm <span class="caret"></span></a>
-					  
-						<!-- User action menu -->
-						<ul class="dropdown-menu pull-right">
-						  
-							<li><a href="#/"><i class="icon-user"></i>Tài khoản của tôi</a></li>
-							<li class="divider"></li>
-							<li><a href="#"><i class="icon-logout"></i>Đăng xuất</a></li>
-						</ul>
-						<!-- /user action menu -->
-						
-					  </li>
-				</ul>
-				<!-- /user info -->
-				
-			  </div>
-		</div>
-		<!-- /main header -->
-		
-
-
-		
-		<!-- code vào nơi này -->
-
-
-
-
-
-		<!-- Main content -->
-  </div>
-  <!-- /main container -->
-  
+<body class="login-page">
+<div class="login-container">
+	<div class="login-branding">
+		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>
+	</div>
+	<div class="login-content">
+		<?php 
+		// require_once 'templates/message.php';
+		?>
+		<h2><strong>Welcome</strong>, please login</h2>
+		<form id="login-form" class="form-signin" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
+			<div class="form-group">
+				<input name="email" id="email" type="email" placeholder="Email" class="form-control" autofocus>
+			</div>                        
+			<div class="form-group">
+				<input name="password" id="password" type="password" placeholder="Password" class="form-control">
+			</div>
+			<div class="form-group">
+				 <div class="checkbox checkbox-replace">
+					<input type="checkbox" id="remeber">
+					<label for="remeber">Remeber me</label>
+				  </div>
+			 </div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block bt-login">Login</button>
+			</div>
+			<p class="text-center"><a href="forgot-password.php">Forgot your password | </a><a href="register.php">Sign Up</a></p>                     
+		</form>
+	</div>
 </div>
-<!-- /page container -->
-
 <!--Load JQuery-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metismenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/blockui-master/jquery-ui.js"></script>
-<script src="js/plugins/blockui-master/jquery.blockUI.js"></script>
-<!--Float Charts-->
-<script src="js/plugins/flot/jquery.flot.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.resize.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.selection.min.js"></script>        
-<script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.time.min.js"></script>
-<script src="js/functions.js"></script>
-
-<!--ChartJs-->
-<script src="js/plugins/chartjs/Chart.min.js"></script>
-
 </body>
+
+<!-- Mirrored from g-axon.com/mouldifi-3.0/light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
 </html>
+<?php ob_end_flush(); ?>
+<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>    
