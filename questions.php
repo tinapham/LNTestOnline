@@ -135,7 +135,8 @@ background:#f5f5f5;
 		<div class="main-content">
 			<h1 class="page-title"></h1>
 
-			<div class="col-md-10 col-md-offset-1 question-box">
+			<form>
+				<div class="col-md-10 col-md-offset-1 question-box">
 
 				<div class="icon-question">
       				<img src="images/circle.png">
@@ -221,6 +222,7 @@ background:#f5f5f5;
 					</div> 
 				</div> 
 			</div>
+			</form>
 
 			<!-- Footer -->
 			<footer class="footer-main col-lg-10"> 
