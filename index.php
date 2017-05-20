@@ -22,8 +22,7 @@ require_once 'config.php';
 		header('Location: home.php');exit;
 	}
 ?>
-
-<!-- Mirrored from g-axon.com/mouldifi-3.0/light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

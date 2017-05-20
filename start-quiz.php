@@ -1,5 +1,4 @@
-<?php 
-	require_once 'template/header.php';				
+<?php require_once 'template/header.php';				
 	try {
 		$user = new Cl_User();
 		$categories = $user->getCategory();

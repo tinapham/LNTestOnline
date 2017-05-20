@@ -6,8 +6,7 @@ if(!isset($_SESSION['logged_in'])){
 	header('Location: index.php');
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,7 +44,7 @@ if(!isset($_SESSION['logged_in'])){
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
 			<li <?php if($uri == 'home.php') echo "class='active'"; ?>><a href="home.php"><i class="icon-home"></i><span class="title">Trang chủ</span></a>
 			</li>
-			<li <?php if($uri == 'quiz-results.php') echo "class='active'"; ?>><a href=""><i class="icon-newspaper"></i><span class="title">Lịch sử thi</span></a>
+			<li <?php if($uri == 'quiz-results.php') echo "class='active'"; ?>><a href="quiz-results.php"><i class="icon-newspaper"></i><span class="title">Lịch sử thi</span></a>
 			</li>
 			<li <?php if($uri == 'start-quiz.php') echo "class='active'"; ?>><a href="start-quiz.php"><i class="icon-reply"></i><span class="title">Vào thi </span></a>
 			</li>

@@ -1,57 +1,66 @@
-<?php require_once 'template/header.php';?>
-
-<?php 
-	if( !empty( $_POST )){
-		try {
-			$user = new Cl_User();
-			$result = $user->getAnswers( $_POST );
-		} catch (Exception $e) {
-			$_SESSION['error'] = $e->getMessage();
-		} 
-	}else{
+<?php require_once 'template/header.php';	
+	try {
+		$user = new Cl_User();
+		$results = $user->getResults();
+		if(empty($results)){
+			// $_SESSION['error'] = NO_CATEGORY;
+			header('Location: home.php');exit;
+		}
+	} catch (Exception $e) {
+		$_SESSION['error'] = $e->getMessage();
 		header('Location: home.php');exit;
 	}
 ?>
-	<div class="content">
-     	<div class="container">
-     		<div class="row">
-	     		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-					<h1 class="text-center text_underline">Your Quiz Results:</h1>
-					<br />
-					<form class="form-horizontal">
-						<div class="form-group mg-b50">
-							<p class="col-sm-7 control-label">Right Answers:</p>
-							<div class="col-sm-5">
-								<span class="well ans"> <?php echo isset($result['right_answer'])? $result['right_answer']:''; ?>
-								</span>
-							</div>
-						</div>
-						<div class="form-group mg-b50">
-							<p class="col-sm-7 control-label">Wrong Answers:</p>
-							<div class="col-sm-5">
-								<span class="well ans"> <?php echo isset($result['wrong_answer'])? $result['wrong_answer']:''; ?>
-								</span>
-							</div>
-						</div>
-						<div class="form-group mg-b50">
-							<p class="col-sm-7 control-label">Unanswered Questions:</p>
-							<div class="col-sm-5">
-								<span class="well ans"> <?php echo isset($result['unanswered'])? $result['unanswered']:''; ?>
-								</span> 
-							</div>
-						</div>
-					</form>
-					<div class="row btn-c well">
-	     				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-	     					<a href="start-quiz.php" class="btn btn-success btn-home">Start New Quiz</a>
-	     				</div>
-	     				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-	     					<a href="quiz-results.php" class="btn btn-info btn-home">Your Quiz Results</a>
-	     				</div>
-	     			</div>
-				</div>
-     		</div>
-     	</div>
-    </div> <!-- /container -->
 
+<!-- Main content -->
+<div class="main-content">
+	<h1 class="page-title">Data Tables</h1>
+		<!-- Breadcrumb -->
+	<ol class="breadcrumb breadcrumb-2"> 
+			<li><a href="home.php"><i class="fa fa-home"></i>Trang chủ</a></li> 
+			<li class="active"><strong>Lịch sử thi</strong></li> 
+	</ol>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading clearfix">
+					<h3 class="panel-title">Kết quả các lần thi</h3>
+					<ul class="panel-tool-options"> 
+						<li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
+						<li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
+						<li><a data-rel="close" href="#"><i class="icon-cancel"></i></a></li>
+					</ul>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover dataTables-example" >
+							<thead>
+								<tr>
+									<th>Mã bài thi</th>
+									<th>Môn học</th>
+									<th>Câu trả lời đúng</th>
+									<th>Câu trả lời sai</th>
+									<th>Câu chưa trả lời</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php 
+								foreach ($results as $result) { 
+								?>
+								<tr class="gradeX">
+									<td><?php echo $result['id'];?></td>
+									<td><?php echo $result['category_name'];?></td>
+									<td><?php echo $result['right_answer'];?></td>
+									<td><?php echo $result['wrong_answer'];?></td>
+									<td><?php echo $result['unanswered'];?></td>
+								</tr>
+								<?php } ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php require_once 'template/footer.php';?>

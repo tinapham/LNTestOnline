@@ -1,10 +1,4 @@
-<?php
-/**
-@author vetripandi
-@copyright http:www.vetbossel.in
- */
-
-require_once 'messages.php';
+<?php require_once 'messages.php';
 
 //site specific configuration declartion
 //define( 'BASE_PATH', 'http://localhost/php-quiz/');

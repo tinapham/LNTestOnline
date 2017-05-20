@@ -217,7 +217,20 @@ class Cl_User
 		mysqli_close($this->_con);
 		return $categories;
 	}
-	
+
+	public function getResults()
+	{
+		$user_id = $_SESSION['id'];
+		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id";
+		$results = mysqli_query($this->_con, $query)  or die(mysqli_error());
+		$scores = array();
+		while ( $result = mysqli_fetch_assoc($results) ) {
+			$scores[$result['id']] = $result;
+		}
+		mysqli_close($this->_con);
+		return $scores;
+	}
+
 	public function getQuestions(array $data)
 	{
 		if( !empty( $data ) ){
