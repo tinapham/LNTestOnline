@@ -35,7 +35,7 @@
 						 <form class="form-horizontal" method="post" id='signin' name="signin" action="questions.php">
 						 	<div class="form-group">
 						 		<div class="col-sm-offset-1 col-sm-10"> 
-						 			<select class="form-control" >
+						 			<select class="form-control" name="category">
 										<option value="">Chọn môn thi</option>
 										<?php  foreach ($categories as $key=>$category){ ?>
 											<option value="<?php echo $key; ?>"><?php echo $category; ?></option>

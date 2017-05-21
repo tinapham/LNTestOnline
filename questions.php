@@ -1,26 +1,31 @@
 <?php require_once 'template/header.php';   ?>
-        <?php
 
-        $databaseHost = 'localhost';
-        $databaseName = 'quiz';
-        $databaseUsername = 'root';
-        $databasePassword = '';
-
-        $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-        $result = mysqli_query($mysqli, "select * from questions where category_id=1 ORDER BY RAND()");
-
-
-        ?>
-
+<?php 
+    
+    if( !empty( $_POST )){
+        try {
+            $user = new Cl_User();
+            $results = $user->getQuestions($_POST);
+        } catch (Exception $e) {
+            $_SESSION['error'] = $e->getMessage();
+        } 
+        
+            // var_dump($results);
+            // exit();
+    }else{
+        $_SESSION['error'] = CHOOSE_CATEGORY;
+        header('Location: home.php');exit;
+    }
+    $time = 3;
+?>
 
         <!-- Main content -->
         <div class="main-content">
             <h1 class="page-title"></h1>
-
             <form role="form" id='quiz_form' method="post" action="quiz-result.php">
                 <?php
                 $sttQues=1;
-                while($res = mysqli_fetch_array($result)) {
+                foreach ($results['questions'] as $res) {
                     echo '<div class="col-md-10 col-md-offset-1 question-box">
                             <div class="icon-question">
                                 <img src="images/circle.png">
@@ -42,51 +47,56 @@
 
                     if(isset( $res['answer1'] ) && !empty( $res['answer1'] )){
                         echo '<div class="radio radio-replace radio-primary">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color" checked="checked">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="1" checked="checked">
                                         <label for="radio6">'.$res['answer1'].'</label>
                                     </div>';
                     }
 
                     if(isset( $res['answer2'] ) && !empty( $res['answer2'] )){
                         echo '<div class="radio radio-replace radio-success">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="2">
                                         <label for="radio7">'.$res['answer2'].'</label>
                                     </div>';
                     }
 
                     if(isset( $res['answer3'] ) && !empty( $res['answer3'] )) {
                         echo '<div class="radio radio-replace radio-info">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="3">
                                         <label for="radio8">' . $res['answer3'] . '</label>
                                     </div>';
                     }
 
                     if(isset( $res['answer4'] ) && !empty( $res['answer4'] )){
                         echo '<div class="radio radio-replace radio-warning">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="4">
                                         <label for="radio9">'.$res['answer4'].'</label>
                                     </div>';
                     }
 
                     if(isset( $res['answer5'] ) && !empty( $res['answer5'] )) {
                         echo '<div class="radio radio-replace radio-danger">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="5">
                                         <label for="radio10">'.$res['answer5'].'</label>
                                     </div>';
                     }
                     if(isset( $res['answer6'] ) && !empty( $res['answer6'] )){
                         echo '<div class="radio radio-replace radio-primary">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color" checked="checked">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="6" checked="checked">
                                         <label for="radio6">'.$res['answer6'].'</label>
                                     </div>';
                     }
 
                     if(isset( $res['answer7'] ) && !empty( $res['answer7'] )){
                         echo '<div class="radio radio-replace radio-success">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="color">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="7">
                                         <label for="radio7">'.$res['answer7'].'</label>
                                     </div>';
                     }
+
+                    echo '<div class="radio radio-replace radio-success">
+                                        <input type="radio" checked="checked" style="display:none" value="smart_quiz" id="radio1_'.$result['id'].'" name="'.$result['id'].'"/>
+                                    </div>';
+
 
                     echo '
                         </div>
@@ -99,8 +109,7 @@
                 </div>
             </form>
 
-
-
+    
             <!-- Footer -->
             <footer class="footer-main col-lg-10 footer-main-my">
                 &copy; 2017 <strong>LN's test online</strong> Admin Theme by <a target="_blank" href="#/">Lam-na</a>
@@ -114,6 +123,20 @@
 
 </div>
 <!-- /page container -->
+
+<div class="fixed" style="position: fixed; right: 0px; top: 30%;">
+    <div class="panel panel-success">
+        <div class="panel-heading clearfix" style="height: 32px;border-bottom-width: 1px;padding-top: 9px;"> 
+            <div class="panel-title">
+                <b style="padding-left: 4px;">Timer</b>
+            </div> 
+        </div> 
+                <!-- panel body --> 
+        <div class="panel-body" style="height: 37px;padding-bottom: 29px;"> 
+            <span id='timer'></span>
+        </div> 
+    </div>
+</div>
 
 <!--Load JQuery-->
 <script src="js/jquery.min.js"></script>
@@ -133,5 +156,53 @@
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
 
+<script>
+    var timec="<?php echo $time; ?>";
+    var c = 60*parseInt(timec);
+    var t;
+    timedCount();
+
+    function timedCount() {
+
+        var hours = parseInt( c / 3600 ) % 24;
+        var minutes = parseInt( c / 60 ) % 60;
+        var seconds = c % 60;
+
+        var result = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds);
+
+        
+        $('#timer').html(result);
+        if(c == 0 ){
+            setConfirmUnload(false);
+            $("#quiz_form").submit();
+        }
+        c = c - 1;
+        t = setTimeout(function(){ timedCount() }, 1000);
+    }
+    </script>
+
+
 </body>
 </html>
+
+<script type="text/javascript">
+
+    // Prevent accidental navigation away
+    setConfirmUnload(true);
+    function setConfirmUnload(on)
+    {
+        window.onbeforeunload = on ? unloadMessage : null;
+    }
+    function unloadMessage()
+    {
+        return 'Your Answered Questions are resetted zero, Please select stay on page to continue your Quiz';
+    }
+
+    $(document).on('click', 'button:submit',function(){
+        setConfirmUnload(false);
+    });
+
+ 
+
+</script>
+

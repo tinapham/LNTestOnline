@@ -241,17 +241,20 @@ class Cl_User
 				throw new Exception( FIELDS_MISSING );
 			}
 			$user_id = $_SESSION['id'];
+
+			$numquestion = array();
+			$rownum = mysqli_query( $this->_con, "SELECT num_question FROM categories where id=$category_id");
+			$result = mysqli_fetch_assoc($rownum);
+			$numquestion = $result['num_question'];
+			// echo $numquestion;
+
 			$query = "INSERT INTO scores ( user_id,right_answer,category_id)VALUES ( '$user_id',0,'$category_id')";
 			mysqli_query( $this->_con, $query);
 			$_SESSION['score_id'] = mysqli_insert_id($this->_con);
 			$results = array();
-			$number_question = $_POST['num_questions'];
-			$row = mysqli_query( $this->_con, "select * from questions where category_id=$category_id ORDER BY RAND()");
-			$rowcount = mysqli_num_rows( $row );
-			$remainder = $rowcount/$number_question;
-			$results['number_question'] = $number_question;
-			$results['remainder'] = $remainder;
-			$results['rowcount'] = $rowcount;
+
+			$row = mysqli_query( $this->_con, "select * from questions where category_id=$category_id ORDER BY RAND()  LIMIT $numquestion");
+
 			while ( $result = mysqli_fetch_assoc($row) ) {
 				$results['questions'][] = $result;
 			}
@@ -261,6 +264,7 @@ class Cl_User
 			throw new Exception( FIELDS_MISSING );
 		}
 	}
+
 	
 	public function getAnswers(array $data)
 	{
