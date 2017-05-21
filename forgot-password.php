@@ -53,7 +53,7 @@ require_once 'config.php';
 <![endif]-->
 
 </head>
-<body class="login-page">
+<body class="login-page" style="background:url('images/bg.jpg') no-repeat center center; height:700px;">
 <div class="login-container">
 	<div class="login-branding">
 		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>

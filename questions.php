@@ -6,17 +6,15 @@
         try {
             $user = new Cl_User();
             $results = $user->getQuestions($_POST);
+            $time = $user->getTimer($_POST);
         } catch (Exception $e) {
             $_SESSION['error'] = $e->getMessage();
         } 
-        
-            // var_dump($results);
-            // exit();
     }else{
         $_SESSION['error'] = CHOOSE_CATEGORY;
         header('Location: home.php');exit;
     }
-    $time = 3;
+    
 ?>
 
         <!-- Main content -->

@@ -12,6 +12,7 @@ class Cl_User
 	 */
 	protected $_con;
 	
+	protected $_timer = "";
 	/**
 	 * it will initalize DBclass
 	 */
@@ -86,7 +87,7 @@ class Cl_User
 				throw new Exception( LOGIN_FIELDS_MISSING );
 			}
 			$password = md5( $password );
-			$query = "SELECT id, name, email, created FROM users where email = '$email' and password = '$password' ";
+			$query = "SELECT id, name, email, created, social_id FROM users where email = '$email' and password = '$password' ";
 			$result = mysqli_query($this->_con, $query);
 			$data = mysqli_fetch_assoc($result);
 			$count = mysqli_num_rows($result);
@@ -221,7 +222,7 @@ class Cl_User
 	public function getResults()
 	{
 		$user_id = $_SESSION['id'];
-		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id";
+		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id AND `categories`.`id` = `scores`.`category_id`";
 		$results = mysqli_query($this->_con, $query)  or die(mysqli_error());
 		$scores = array();
 		while ( $result = mysqli_fetch_assoc($results) ) {
@@ -243,9 +244,14 @@ class Cl_User
 			$user_id = $_SESSION['id'];
 
 			$numquestion = array();
-			$rownum = mysqli_query( $this->_con, "SELECT num_question FROM categories where id=$category_id");
+			$rownum = mysqli_query( $this->_con, "SELECT num_question,time_quiz FROM categories where id=$category_id");
+
 			$result = mysqli_fetch_assoc($rownum);
 			$numquestion = $result['num_question'];
+			$timerc = $result['time_quiz'];
+			$this->_timer = $this->_timer.$timerc;
+
+
 			// echo $numquestion;
 
 			$query = "INSERT INTO scores ( user_id,right_answer,category_id)VALUES ( '$user_id',0,'$category_id')";
@@ -265,7 +271,11 @@ class Cl_User
 		}
 	}
 
-	
+	public function getTimer(){
+
+		return $this->_timer;
+	}
+
 	public function getAnswers(array $data)
 	{
 		if( !empty( $data ) ){
@@ -299,4 +309,5 @@ class Cl_User
 			return $results;
 		}	
 	}
+
 }

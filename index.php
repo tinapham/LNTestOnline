@@ -10,6 +10,9 @@ require_once 'config.php';
 			$data = $user_obj->login( $_POST );
 			if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
 				$_SESSION['success'] = 'You are logged in successfully';
+				if($_SESSION['social_id']=='admin') {
+					header('Location: index-2.php'); exit;
+				} 
 				header('Location: home.php');exit;
 			}
 		} catch (Exception $e) {
@@ -61,7 +64,7 @@ require_once 'config.php';
 
 
 </head>
-<body class="login-page">
+<body class="login-page" style="background:url('images/bg.jpg') no-repeat center center; height:700px;">
 <div class="login-container">
 	<div class="login-branding">
 		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>

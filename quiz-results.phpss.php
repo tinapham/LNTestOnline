@@ -14,7 +14,7 @@
 
 <!-- Main content -->
 <div class="main-content">
-	<h1 class="page-title">Data Tables</h1>
+	<h1 class="page-title">Lịch sử thi</h1>
 		<!-- Breadcrumb -->
 	<ol class="breadcrumb breadcrumb-2"> 
 			<li><a href="home.php"><i class="fa fa-home"></i>Trang chủ</a></li> 
@@ -41,6 +41,7 @@
 									<th>Câu trả lời đúng</th>
 									<th>Câu trả lời sai</th>
 									<th>Câu chưa trả lời</th>
+									<th>Điểm số</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -53,6 +54,12 @@
 									<td><?php echo $result['right_answer'];?></td>
 									<td><?php echo $result['wrong_answer'];?></td>
 									<td><?php echo $result['unanswered'];?></td>
+									<td><?php 
+										$right = (int) $result['right_answer'];
+										$total = $right+$result['wrong_answer']+$result['unanswered'];
+										if($total==0) echo 0; 
+										else echo round($right*10/$total , 1);
+									?></td>
 								</tr>
 								<?php } ?>
 							</tbody>
