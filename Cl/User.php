@@ -86,7 +86,7 @@ class Cl_User
 				throw new Exception( LOGIN_FIELDS_MISSING );
 			}
 			$password = md5( $password );
-			$query = "SELECT id, name, email, created FROM users where email = '$email' and password = '$password' ";
+			$query = "SELECT id, name, email, created, social_id FROM users where email = '$email' and password = '$password' ";
 			$result = mysqli_query($this->_con, $query);
 			$data = mysqli_fetch_assoc($result);
 			$count = mysqli_num_rows($result);
