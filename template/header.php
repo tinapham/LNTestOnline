@@ -20,6 +20,7 @@ if(!isset($_SESSION['logged_in'])){
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
+<link href="css/my-css.css" rel="stylesheet">
 </head>
 <body>
 
