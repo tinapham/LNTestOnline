@@ -14,7 +14,7 @@
 
 <!-- Main content -->
 <div class="main-content">
-	<h1 class="page-title">Data Tables</h1>
+	<h1 class="page-title">Lịch sử thi</h1>
 		<!-- Breadcrumb -->
 	<ol class="breadcrumb breadcrumb-2"> 
 			<li><a href="home.php"><i class="fa fa-home"></i>Trang chủ</a></li> 

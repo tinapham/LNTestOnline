@@ -17,7 +17,7 @@
 				<div class="col-lg-10">
 					<div class="panel panel-default">
 						<div class="panel-heading clearfix">
-							<h3 class="panel-title">Your Quiz Results:</h3>
+							<h3 class="panel-title">Kết quả thi:</h3>
 							<ul class="panel-tool-options"> 
 								<li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
 								<li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
@@ -27,7 +27,7 @@
 						<div class="panel-body">	
 							 <form class="form-horizontal">
 								<div class="form-group"> 
-									<label class="col-sm-2 control-label">Right Answers:</label> 
+									<label class="col-sm-2 control-label">Số câu đúng:</label> 
 									<div class="col-sm-8"> 
 										<span class="form-control input-lg"> 2
 										<?php 
@@ -37,7 +37,7 @@
 								</div>
 								<div class="line-dashed"></div>
 								<div class="form-group"> 
-									<label class="col-sm-2 control-label">Right Answers:</label> 
+									<label class="col-sm-2 control-label">Số câu sai:</label> 
 									<div class="col-sm-8"> 
 										<span class="form-control input-lg"> 4
 										<?php 
@@ -47,7 +47,7 @@
 								</div>
 								<div class="line-dashed"></div>
 								<div class="form-group"> 
-									<label class="col-sm-2 control-label">Right Answers:</label> 
+									<label class="col-sm-2 control-label">Số câu chưa trả lời:</label> 
 									<div class="col-sm-8"> 
 										<span class="form-control input-lg"> 0
 										<?php 
@@ -57,11 +57,8 @@
 									</div> 
 								</div>
 								<div class="line-dashed"></div>
-								<div class="col-sm-offset-2 col-xs-10 col-sm-5 col-md-5 col-lg-5">
-			     					<a href="start-quiz.php" class="btn btn-success btn-home">Start New Quiz</a>
-			     				</div>
-			     				<div class="col-xs-10 col-sm-5 col-md-5 col-lg-5">
-			     					<a href="quiz-results.php" class="btn btn-info btn-home">Your Quiz Results</a>
+			     				<div class="col-sm-offset-4 col-xs-10 col-sm-5 col-md-5 col-lg-5">
+			     					<a href="quiz-results.php" class="btn btn-info btn-home">Xem kết quả thi trước</a>
 			     				</div>
 							</form>
 						</div>
