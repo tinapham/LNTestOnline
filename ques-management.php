@@ -1,4 +1,5 @@
 <?php require_once 'template/header-admin.php';	
+	require_once 'add-question.php';	
 	try {
 		$user = new Cl_User();
 		$results = $user->getListQuestions();
@@ -24,9 +25,8 @@
 			<div class="panel panel-default">
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title">Kết quả các lần thi</h3>
-					<ul class="panel-tool-options"> 
-						<li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
-						<li><a class="btn" data-toggle="modal" data-target="#myModal"><span class="icon-plus"></span>Thêm câu hỏi</a></li>
+					<ul class="panel-tool-options">
+						<li><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">+ Thêm câu hỏi </button></li>
 					</ul>
 				</div>
 				<div class="panel-body">

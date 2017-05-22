@@ -24,6 +24,7 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading clearfix">
+						<?php require_once 'template/message.php';?>
 						<h3 class="panel-title">Chọn đề thi:</h3>
 						<ul class="panel-tool-options"> 
 							<li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
@@ -36,7 +37,6 @@
 						 	<div class="form-group">
 						 		<div class="col-sm-offset-1 col-sm-10"> 
 						 			<select class="form-control" name="category" id="category">
-										<option value="">Chọn đề thi</option>
 										<?php  foreach ($categories as $key=>$category){ 
 											var_dump($categories) ?>
 										<option value="<?php echo $key; ?>"><?php echo $category; ?></option>
@@ -56,6 +56,5 @@
 			</div>
 		</div>
 	</div>
-	
 <?php require_once 'template/footer.php';?>
 	

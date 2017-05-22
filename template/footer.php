@@ -21,7 +21,7 @@
 
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
-
+<script src="js/start.js"></script>	
 </body>
 </html>
 <?php ob_end_flush(); ?>

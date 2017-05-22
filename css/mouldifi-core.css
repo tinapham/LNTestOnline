@@ -2763,6 +2763,10 @@ label {
 	color: #00b8ce;
 	background-color: #00b8ce;
 }
+.btn-success {
+	color: #FFF;
+	background-color: #029b17;
+}
 .btn-success.btn-outline {
 	color: #029b17;
 	background-color: transparent;

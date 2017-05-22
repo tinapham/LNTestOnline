@@ -54,6 +54,7 @@ require_once 'config.php';
 <!-- /mouldifi core stylesheet -->
 
 <link href="css/mouldifi-forms.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -70,10 +71,8 @@ require_once 'config.php';
 		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>
 	</div>
 	<div class="login-content">
-		<?php 
-		// require_once 'templates/message.php';
-		?>
-		<h2><strong>Welcome</strong>, please login</h2>
+		<?php require_once 'template/message.php';?>
+		<h2><strong>Mời bạn đăng nhập</strong></h2>
 		<form id="login-form" class="form-signin" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
 			<div class="form-group">
 				<input name="email" id="email" type="email" placeholder="Email" class="form-control" autofocus>
@@ -84,13 +83,13 @@ require_once 'config.php';
 			<div class="form-group">
 				 <div class="checkbox checkbox-replace">
 					<input type="checkbox" id="remeber">
-					<label for="remeber">Remeber me</label>
+					<label for="remeber">Ghi nhớ</label>
 				  </div>
 			 </div>
 			<div class="form-group">
-				<button class="btn btn-primary btn-block bt-login">Login</button>
+				<button class="btn btn-primary btn-block bt-login">Đăng nhập</button>
 			</div>
-			<p class="text-center"><a href="forgot-password.php">Forgot your password | </a><a href="register.php">Sign Up</a></p>                     
+			<p class="text-center"><a href="forgot-password.php">Quên mật khẩu? | </a><a href="register.php">Đăng kí</a></p>                     
 		</form>
 	</div>
 </div>
