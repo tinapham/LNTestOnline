@@ -35,10 +35,11 @@
 						 <form class="form-horizontal" method="post" id='signin' name="signin" action="questions.php">
 						 	<div class="form-group">
 						 		<div class="col-sm-offset-1 col-sm-10"> 
-						 			<select class="form-control" >
-										<option value="">Chọn môn thi</option>
-										<?php  foreach ($categories as $key=>$category){ ?>
-											<option value="<?php echo $key; ?>"><?php echo $category; ?></option>
+						 			<select class="form-control" name="category" id="category">
+										<option value="">Chọn đề thi</option>
+										<?php  foreach ($categories as $key=>$category){ 
+											var_dump($categories) ?>
+										<option value="<?php echo $key; ?>"><?php echo $category; ?></option>
 										<?php } ?>
 									</select> 
 						 		</div>

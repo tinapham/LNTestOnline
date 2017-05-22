@@ -231,7 +231,7 @@ class Cl_User
 		return $scores;
 	}
 
-	public function getQuestions(array $data)
+	public function getExam(array $data)
 	{
 		if( !empty( $data ) ){
 				
@@ -240,26 +240,36 @@ class Cl_User
 			if((!$category_id) ) {
 				throw new Exception( FIELDS_MISSING );
 			}
-			$user_id = $_SESSION['id'];
-			$query = "INSERT INTO scores ( user_id,right_answer,category_id)VALUES ( '$user_id',0,'$category_id')";
-			mysqli_query( $this->_con, $query);
-			$_SESSION['score_id'] = mysqli_insert_id($this->_con);
 			$results = array();
-			$number_question = $_POST['num_questions'];
-			$row = mysqli_query( $this->_con, "select * from questions where category_id=$category_id ORDER BY RAND()");
-			$rowcount = mysqli_num_rows( $row );
-			$remainder = $rowcount/$number_question;
-			$results['number_question'] = $number_question;
-			$results['remainder'] = $remainder;
-			$results['rowcount'] = $rowcount;
+			$row = mysqli_query( $this->_con, "select * from `categories` where `id`=$category_id");
+			while ( $result = mysqli_fetch_assoc($row) ) {		
+				$results['num_question'] = $result['num_question'];
+				$results['time_quiz'] = $result['time_quiz'];
+			}
+			$row = mysqli_query( $this->_con, "select *,  from `questions` where `category_id` = $category_id ORDER BY RAND()");
 			while ( $result = mysqli_fetch_assoc($row) ) {
 				$results['questions'][] = $result;
 			}
+			// var_dump($results);
+			// exit;
 			mysqli_close($this->_con);
 			return $results;
 		} else{
 			throw new Exception( FIELDS_MISSING );
 		}
+	}
+
+
+	public function getQuestions()
+	{
+		$results = array();
+		$row = mysqli_query( $this->_con, "select `questions`.*, `categories`.`category_name` from `questions` JOIN `categories` where `questions`.`category_id` = `categories`.`id` order by `questions`.`id` ASC");
+		while ( $result = mysqli_fetch_assoc($row) ) {
+			$results[] = $result;
+			// var_dump($result);
+		}
+		mysqli_close($this->_con);
+		return $results;
 	}
 	
 	public function getAnswers(array $data)

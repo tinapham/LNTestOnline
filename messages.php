@@ -13,3 +13,4 @@ define('LOGOUT_SUCCESS', 'User logged out successfully');
 define('CHOOSE_CATEGORY', 'Choose your quiz category');
 define('NO_CATEGORY', 'There is no quiz category to choose, Please contact Administrator');
 define('PASSWORD_RESET_SUCCESS', 'Password resetted and sent to your mail');
+define('NO_QUESTION', 'There is no question to show');

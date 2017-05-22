@@ -1,4 +1,21 @@
 <?php require_once 'template/header.php';   ?>
+<?php 
+    // if( !empty( $_POST )){
+    //     try {
+    //         $user = new Cl_User();
+    //         $results = $user->getExam($_POST  );
+    //         var_dump($results);
+    //     } catch (Exception $e) {
+    //         $_SESSION['error'] = $e->getMessage();
+    //     } 
+        
+    // }else{
+    //     $_SESSION['error'] = CHOOSE_CATEGORY;
+    //     header('Location: start-quiz.php');exit;
+    // }
+
+
+?>
         <?php
 
         $databaseHost = 'localhost';
