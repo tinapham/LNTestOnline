@@ -21,6 +21,23 @@ if(!isset($_SESSION['logged_in'])){
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
 <link href="css/my-css.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metismenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/blockui-master/jquery-ui.js"></script>
+<script src="js/plugins/blockui-master/jquery.blockUI.js"></script>
+<!--Float Charts-->
+<script src="js/plugins/flot/jquery.flot.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.resize.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.selection.min.js"></script>        
+<script src="js/plugins/flot/jquery.flot.pie.min.js"></script>
+<script src="js/plugins/flot/jquery.flot.time.min.js"></script>
+<script src="js/functions.js"></script>
+
+<!--ChartJs-->
+<script src="js/plugins/chartjs/Chart.min.js"></script>
 </head>
 <body>
 

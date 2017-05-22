@@ -315,6 +315,7 @@ class Cl_User
 			return $results;
 		}	
 	}
+
 	public function addQuestion (array $data)
 	{
 		if( !empty( $data ) ){	
@@ -329,7 +330,7 @@ class Cl_User
 			$category_id = $_POST['category'];
 			$query = "INSERT INTO questions ( `question_name`,`answer1`,`answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer`, `category_id` ) VALUES ( `$question_name`,`$answer1`,`$answer2`,`$answer3`,`$answer4`,`$answer5`,`$answer6`, $answer , $category_id )";
 			$row = mysqli_query( $this->_con, $query);
-			var_dump($row);
+			// var_dump($row);
 			exit;
 			mysqli_close($this->_con);
 		} else{
@@ -337,3 +338,30 @@ class Cl_User
 		}
 	}
 }
+
+
+	public function getExam()
+	{
+		$results = array();
+		$row = mysqli_query( $this->_con, "select * from categories");
+		while ( $result = mysqli_fetch_assoc($row) ) {
+			$results['categories'][] = $result;
+		}
+		mysqli_close($this->_con);
+		return $results;
+	}
+
+	public function setExam($id, $loaide, $numQ, $time){
+
+		$update_query = "update categories set category_name='$loaide', time_quiz = '$time', num_question = '$numQ' where id='$id' ";
+
+		if ($this->_con->query($update_query) === TRUE) {
+		    echo "Record updated successfully";
+		} else {
+		    echo "Error updating record: " . $conn->error;
+		}
+
+		$this->_con->close();
+	}
+}
+
