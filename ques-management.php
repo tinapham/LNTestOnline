@@ -1,7 +1,7 @@
 <?php require_once 'template/header-admin.php';	
 	try {
 		$user = new Cl_User();
-		$results = $user->getQuestions();
+		$results = $user->getListQuestions();
 		if(empty($results)){
 			$_SESSION['error'] = NO_QUESTION;
 			header('Location: home.php');exit;

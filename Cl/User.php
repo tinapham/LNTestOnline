@@ -12,6 +12,7 @@ class Cl_User
 	 */
 	protected $_con;
 	
+	protected $_timer = "";
 	/**
 	 * it will initalize DBclass
 	 */
@@ -221,7 +222,7 @@ class Cl_User
 	public function getResults()
 	{
 		$user_id = $_SESSION['id'];
-		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id AND `categories`.`id` = `scores`.`category_id`";
+		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id AND `categories`.`id` = `scores`.`category_id` ORDER BY `scores`.`id` ASC";
 		$results = mysqli_query($this->_con, $query)  or die(mysqli_error());
 		$scores = array();
 		while ( $result = mysqli_fetch_assoc($results) ) {
@@ -231,7 +232,18 @@ class Cl_User
 		return $scores;
 	}
 
-	public function getExam(array $data)
+	public function getListQuestions()
+	{
+		$results = array();
+		$row = mysqli_query( $this->_con, "select `questions`.*, `categories`.`category_name` from `questions` JOIN `categories` where `questions`.`category_id` = `categories`.`id` order by `questions`.`id` ASC");
+		while ( $result = mysqli_fetch_assoc($row) ) {
+			$results[] = $result;
+		}
+		mysqli_close($this->_con);
+		return $results;
+	}
+
+	public function getQuestions(array $data)
 	{
 		if( !empty( $data ) ){
 				
@@ -240,38 +252,31 @@ class Cl_User
 			if((!$category_id) ) {
 				throw new Exception( FIELDS_MISSING );
 			}
+			$user_id = $_SESSION['id'];
+			$numquestion = array();
+			$rownum = mysqli_query( $this->_con, "SELECT num_question,time_quiz FROM categories where id=$category_id");
+			$result = mysqli_fetch_assoc($rownum);
+			$numquestion = $result['num_question'];
+			$timerc = $result['time_quiz'];
+			$this->_timer = $this->_timer.$timerc;
+			// echo $numquestion;
+			$query = "INSERT INTO scores ( user_id,right_answer,category_id)VALUES ( '$user_id',0,'$category_id')";
+			mysqli_query( $this->_con, $query);
+			$_SESSION['score_id'] = mysqli_insert_id($this->_con);
 			$results = array();
-			$row = mysqli_query( $this->_con, "select * from `categories` where `id`=$category_id");
-			while ( $result = mysqli_fetch_assoc($row) ) {		
-				$results['num_question'] = $result['num_question'];
-				$results['time_quiz'] = $result['time_quiz'];
-			}
-			$row = mysqli_query( $this->_con, "select *,  from `questions` where `category_id` = $category_id ORDER BY RAND()");
+			$row = mysqli_query( $this->_con, "select * from questions where category_id=$category_id ORDER BY RAND()  LIMIT $numquestion");
 			while ( $result = mysqli_fetch_assoc($row) ) {
 				$results['questions'][] = $result;
 			}
-			// var_dump($results);
-			// exit;
 			mysqli_close($this->_con);
 			return $results;
 		} else{
 			throw new Exception( FIELDS_MISSING );
 		}
 	}
-
-
-	public function getQuestions()
-	{
-		$results = array();
-		$row = mysqli_query( $this->_con, "select `questions`.*, `categories`.`category_name` from `questions` JOIN `categories` where `questions`.`category_id` = `categories`.`id` order by `questions`.`id` ASC");
-		while ( $result = mysqli_fetch_assoc($row) ) {
-			$results[] = $result;
-			// var_dump($result);
-		}
-		mysqli_close($this->_con);
-		return $results;
+	public function getTimer(){
+		return $this->_timer;
 	}
-	
 	public function getAnswers(array $data)
 	{
 		if( !empty( $data ) ){
