@@ -59,17 +59,17 @@ require_once 'config.php';
 		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>
 	</div>
 	<div class="login-content">
-		<h2>Forgot your password?</h2>
-		<p>Don't worry, we'll send you an email to reset your password.</p>
+		<h2>Quên mật khẩu?</h2>
+		<p>Đừng lo lắng. Chúng tôi sẽ gửi mail để khởi tạo lại mật khẩu của bạn.</p>
 		<form id="forgetpassword-form" class="form-register" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
 			<div class="form-group">
-				<input id="email" name="email" type="email" class="form-control" placeholder="Email address">  
+				<input id="email" name="email" type="email" class="form-control" placeholder="Email">  
 			</div>  
 			<p>Don't remember your email? <a href="#">Contact Support</a>.</p>                      
 			<div class="form-group">
-				<button id="forget_btn" class="btn btn-primary btn-block" type="submit">Reset Password</button>
+				<button id="forget_btn" class="btn btn-primary btn-block" type="submit">Gửi</button>
 			</div>
-			<p class="text-center"><a href="index.php"><i class="fa fa-lock"></i> Sign in | </a><a href="register.php"><i class="fa fa-check"></i> Sign Up</a></p>  
+			<p class="text-center"><a href="index.php"><i class="fa fa-lock"></i> Đăng nhập | </a><a href="register.php"><i class="fa fa-check"></i> Đăng ký</a></p>  
 		</form>
 	</div>
 </div>
