@@ -323,13 +323,13 @@ class Cl_User
 	}
 
 	public function setExam($id, $loaide, $numQ, $time){
-
+		echo $id." ".$loaide." ".$numQ." ".$time;
 		$update_query = "update categories set category_name='$loaide', time_quiz = '$time', num_question = '$numQ' where id='$id' ";
-
+		echo $update_query;
 		if ($this->_con->query($update_query) === TRUE) {
-		    echo "Record updated successfully";
+		    echo "ok";
 		} else {
-		    echo "Error updating record: " . $conn->error;
+		    echo "error" . $conn->error;
 		}
 
 		$this->_con->close();
