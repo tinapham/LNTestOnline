@@ -337,7 +337,6 @@ class Cl_User
 			throw new Exception( FIELDS_MISSING );
 		}
 	}
-}
 
 
 	public function getExam()
