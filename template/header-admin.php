@@ -1,10 +1,7 @@
 <?php 
 	ob_start();
 	session_start();
-	require_once 'config.php'; 
-	if(!isset($_SESSION['logged_in'])){
-		header('Location: index.php');
-	}
+	require_once 'permission.php'; 
 ?>
 <html>
 <head>
@@ -20,7 +17,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
-
+<link href="css/login.css" rel="stylesheet">
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -97,7 +94,7 @@
 						<!-- User action menu -->
 						<ul class="dropdown-menu pull-right">
 						  
-							<li><a href="#/"><i class="icon-user"></i>Tài khoản của tôi</a></li>
+							<li><a href="account.php"><i class="icon-user"></i>Tài khoản của tôi</a></li>
 							<li class="divider"></li>
 							<li><a href="logout.php"><i class="icon-logout"></i>Đăng xuất</a></li>
 						</ul>

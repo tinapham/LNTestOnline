@@ -45,6 +45,8 @@ require_once 'config.php';
 
 <link href="css/mouldifi-forms.css" rel="stylesheet">
 
+<link href="css/login.css" rel="stylesheet">
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -60,12 +62,13 @@ require_once 'config.php';
 	</div>
 	<div class="login-content">
 		<h2>Quên mật khẩu?</h2>
-		<p>Đừng lo lắng. Chúng tôi sẽ gửi mail để khởi tạo lại mật khẩu của bạn.</p>
+		<p>Đừng lo lắng, chúng tôi sẽ gửi email để khởi tạo lại mật khẩu cho bạn.</p>
+		<?php require_once 'template/message.php';  ?>
 		<form id="forgetpassword-form" class="form-register" role="form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
 			<div class="form-group">
 				<input id="email" name="email" type="email" class="form-control" placeholder="Email">  
 			</div>  
-			<p>Don't remember your email? <a href="#">Contact Support</a>.</p>                      
+			<p>Không nhớ địa chỉ email? <a href="#">Liên hệ hỗ trợ</a>.</p>                      
 			<div class="form-group">
 				<button id="forget_btn" class="btn btn-primary btn-block" type="submit">Gửi</button>
 			</div>
@@ -76,6 +79,7 @@ require_once 'config.php';
 <!--Load JQuery-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
 </body>
 
 <!-- Mirrored from g-axon.com/mouldifi-3.0/light/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->

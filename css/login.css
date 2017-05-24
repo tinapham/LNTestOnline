@@ -9,13 +9,6 @@
     letter-spacing: -1px;
     text-decoration: underline;
 }
-.bt-login{
-	background-color: #ff8627;
-    color: #ffffff;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    transition: background-color 300ms linear 0s;
-}
 .form-signin .form-control, .form-register .form-control{
   position: relative;
   height: auto;

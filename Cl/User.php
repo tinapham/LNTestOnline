@@ -46,15 +46,9 @@ class Cl_User
 			if (filter_var( $trimmed_data['email'], FILTER_VALIDATE_EMAIL)) {
 				$email = mysqli_real_escape_string( $this->_con, $trimmed_data['email']);
 			} else {
-				throw new Exception( "Hãy nhập email chính xác!" );
+				throw new Exception( "Please enter a valid email address!" );
 			}
 			
-			$query = "SELECT * FROM users where email = '$email'";
-			$result = mysqli_query($this->_con, $query);
-			$count = mysqli_num_rows($result);
-			if( $count == 1){
-				throw new Exception( EMAIL_EXISTED );
-			}
 			
 			if((!$name) || (!$email) || (!$password) || (!$cpassword) ) {
 				throw new Exception( FIELDS_MISSING );
@@ -265,6 +259,7 @@ class Cl_User
 			$numquestion = $result['num_question'];
 			$timerc = $result['time_quiz'];
 			$this->_timer = $this->_timer.$timerc;
+			// echo $numquestion;
 			$query = "INSERT INTO scores ( user_id,right_answer,category_id)VALUES ( '$user_id',0,'$category_id')";
 			mysqli_query( $this->_con, $query);
 			$_SESSION['score_id'] = mysqli_insert_id($this->_con);
@@ -316,29 +311,6 @@ class Cl_User
 		}	
 	}
 
-	public function addQuestion (array $data)
-	{
-		if( !empty( $data ) ){	
-			$question_name = $_POST['question_name'];
-			$answer1 = $_POST['answer1'];
-			$answer2 = $_POST['answer2'];
-			$answer3 = $_POST['answer3'];
-			$answer4 = $_POST['answer4'];
-			$answer5 = $_POST['answer5'];
-			$answer6 = $_POST['answer6'];
-			$answer = $_POST['answer'];
-			$category_id = $_POST['category'];
-			$query = "INSERT INTO questions ( `question_name`,`answer1`,`answer2`,`answer3`,`answer4`,`answer5`,`answer6`,`answer`, `category_id` ) VALUES ( `$question_name`,`$answer1`,`$answer2`,`$answer3`,`$answer4`,`$answer5`,`$answer6`, $answer , $category_id )";
-			$row = mysqli_query( $this->_con, $query);
-			// var_dump($row);
-			exit;
-			mysqli_close($this->_con);
-		} else{
-			throw new Exception( FIELDS_MISSING );
-		}
-	}
-
-
 	public function getExam()
 	{
 		$results = array();
@@ -351,16 +323,15 @@ class Cl_User
 	}
 
 	public function setExam($id, $loaide, $numQ, $time){
-
+		echo $id." ".$loaide." ".$numQ." ".$time;
 		$update_query = "update categories set category_name='$loaide', time_quiz = '$time', num_question = '$numQ' where id='$id' ";
-
+		echo $update_query;
 		if ($this->_con->query($update_query) === TRUE) {
-		    echo "Record updated successfully";
+		    echo "ok";
 		} else {
-		    echo "Error updating record: " . $conn->error;
+		    echo "error" . $conn->error;
 		}
 
 		$this->_con->close();
 	}
 }
-

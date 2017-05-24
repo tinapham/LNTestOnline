@@ -46,10 +46,10 @@
 									echo 	'<tr> 
 											<th scope="row">'.$stt.'</th> 
 											<td>'.$res['category_name'].'</td> 
-											<td>'.$res['time_quiz'].'</td> 
-											<td>'.$res['num_question'].' phút</td> 
+											<td>'.$res['num_question'].'</td> 
+											<td>'.$res['time_quiz'].' phút</td> 
 											<th>
-												<a data-userId=' . $res['id'] . ' class="fuck"><i class="fa fa-pencil-square-o"></i></a>
+												<a data-userId=' . $res['id'] . ' class="viewmodal"><i class="fa fa-pencil-square-o"></i></a>
 											</th>
 										</tr>'; 
 										$stt++;
@@ -209,13 +209,13 @@ function submitContactForm(){
             },
             success:function(msg){
             	console.log(msg);
-                // if(msg == 'ok'){
-                //     // $('#inputQ').val('');
-                //     // $('#inputTime').val('');
-                //     $('.statusMsg').html('<span style="color:green;">Cập nhật thành công</p>');
-                // }else{
-                //     $('.statusMsg').html('<span style="color:red;">Cập nhật thất bại, vui lòng thử lại</span>');
-                // }
+                if(msg == 'ok'){
+                    // $('#inputQ').val('');
+                    // $('#inputTime').val('');
+                    $('.statusMsg').html('<span style="color:green;">Cập nhật thành công</p>');
+                }else{
+                    $('.statusMsg').html('<span style="color:red;">Cập nhật thất bại, vui lòng thử lại</span>');
+                }
                 $('.submitBtn').removeAttr("disabled");
                 $('.modal-body').css('opacity', '');
             }
@@ -224,8 +224,7 @@ function submitContactForm(){
 }
 
 $(document).ready(function(){
-
-	$('.fuck').click(function(event){
+	$('.viewmodal').click(function(event){
 	 	event.preventDefault();
 	 	$('#inputLoaide').val($(this).parent().parent().find('td').eq(0).text());
 	 	$('#inputQ').val($(this).parent().parent().find('td').eq(1).text());

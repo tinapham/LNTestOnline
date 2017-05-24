@@ -2,6 +2,8 @@
 require_once 'config.php';
 $db = new Cl_DBclass();
 
+
+
 if( isset( $_POST['password'] ) && !empty($_POST['password'])){
 	$password =md5( trim( $_POST['password'] ) );
 	$email = $_POST['email'];
