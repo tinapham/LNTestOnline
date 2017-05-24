@@ -17,7 +17,7 @@ require_once 'config.php';
 		}
 	}
 ?>
-<html>
+<html lang="en">
 
 <!-- Mirrored from g-axon.com/mouldifi-3.0/light/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
 <head>
@@ -48,7 +48,7 @@ require_once 'config.php';
 <!-- /mouldifi core stylesheet -->
 
 <link href="css/mouldifi-forms.css" rel="stylesheet">
-<link href="css/login.css" rel="stylesheet">
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -63,25 +63,24 @@ require_once 'config.php';
 		<a href="index-2.html"><img src="images/logo1.png" alt="Mouldifi" title="Mouldifi"></a>
 	</div>
 	<div class="login-content">
-		<?php require_once 'template/message.php';?>
-		<h2>Tạo tài khoản</h2>
+		<h2>Create an account</h2>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form-register" role="form" id="register-form">                        
 			<div class="form-group">
-				<input name="name" id="name" type="text" placeholder="Tên" class="form-control">
+				<input name="name" id="name" type="text" placeholder="Name" class="form-control">
 			</div>   
 			<div class="form-group">
 				<input name="email" id="email" type="email" type="text" placeholder="Email" class="form-control">
 			</div>                     
 			<div class="form-group">
-				<input name="password" id="password" type="password" placeholder="Mật khẩu" class="form-control">
+				<input name="password" id="password" type="password" placeholder="Password" class="form-control">
 			</div>
 			<div>
-				<input name="confirm_password" id="confirm_password" type="password" class="form-control" placeholder="Nhập lại mật khẩu"> 
+				<input name="confirm_password" id="confirm_password" type="password" class="form-control" placeholder="Confirm Password"> 
 			</div>
 			<div class="form-group form-action">
-				<button class="btn btn-primary btn-block" type="submit">Đăng kí</button>
+				<button class="btn btn-primary btn-block" type="submit">Regsiter</button>
 			</div>
-			<p class="text-center">Đã có tài khoản <a href="index.php">Đăng nhập</a></p>                        
+			<p class="text-center">Have an account <a href="index.php">Sign in</a></p>                        
 		</form>
 	</div>
 </div>

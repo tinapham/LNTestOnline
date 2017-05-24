@@ -1,6 +1,5 @@
 <?php require_once 'template/header.php';   ?>
-<link href="css/mouldifi-forms.css" rel="stylesheet">
-<link href="css/my-css.css" rel="stylesheet">
+
 <?php 
     
     if( !empty( $_POST )){
@@ -84,9 +83,6 @@
                                         <label for="radio7">'.$res['answer7'].'</label>
                                     </div>';
                     }
-                    ini_set('display_errors', 'off');
-                    ini_set('log_errors', 'on');
-                    ini_set('error_log','php-error.log');
                     echo '<div class="radio radio-replace radio-success">
                                         <input type="radio" checked="checked" style="display:none" value="smart_quiz" id="radio1_'.$result['id'].'" name="'.$result['id'].'"/>
                                     </div>';
