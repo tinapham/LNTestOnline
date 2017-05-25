@@ -68,3 +68,10 @@ background:#f5f5f5;
     right: 0;
     margin: auto;
 }
+
+.fulltable {
+	padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}

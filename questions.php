@@ -43,7 +43,7 @@
                     echo '<div class="panel-body panel-text">';
                     if(isset( $res['answer1'] ) && !empty( $res['answer1'] )){
                         echo '<div class="radio radio-replace radio-primary">
-                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="1" checked="checked">
+                                        <input type="radio" name="'.$res['id'].'" id="radio-'.$res['id'].'" value="1">
                                         <label for="radio6">'.$res['answer1'].'</label>
                                     </div>';
                     }

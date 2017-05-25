@@ -36,6 +36,9 @@ if(!isset($_SESSION['logged_in'])){
 <script src="js/plugins/flot/jquery.flot.time.min.js"></script>
 <script src="js/functions.js"></script>
 
+<link rel="stylesheet" href="css/switchery.css" />
+<script src="js/switchery.js"></script>
+
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
 </head>

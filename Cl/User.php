@@ -13,6 +13,8 @@ class Cl_User
 	protected $_con;
 	
 	protected $_timer = "";
+
+	protected $catego = array();
 	/**
 	 * it will initalize DBclass
 	 */
@@ -234,6 +236,13 @@ class Cl_User
 
 	public function getListQuestions()
 	{
+		$cate = array();
+		$rownum = mysqli_query( $this->_con, "select * from categories");
+		while ( $catetemp = mysqli_fetch_assoc($rownum) ) {
+			$cate[$catetemp['id']] = $catetemp;
+		}
+		$this->catego = $cate;
+		
 		$results = array();
 		$row = mysqli_query( $this->_con, "select `questions`.*, `categories`.`category_name` from `questions` JOIN `categories` where `questions`.`category_id` = `categories`.`id` order by `questions`.`id` ASC");
 		while ( $result = mysqli_fetch_assoc($row) ) {
@@ -241,6 +250,10 @@ class Cl_User
 		}
 		mysqli_close($this->_con);
 		return $results;
+	}
+
+	public function getCate(){
+		return $this->catego;
 	}
 
 	public function getQuestions(array $data)
@@ -322,10 +335,10 @@ class Cl_User
 		return $results;
 	}
 
-	public function setExam($id, $loaide, $numQ, $time){
-		echo $id." ".$loaide." ".$numQ." ".$time;
-		$update_query = "update categories set category_name='$loaide', time_quiz = '$time', num_question = '$numQ' where id='$id' ";
-		echo $update_query;
+	public function setExam($id, $loaide, $numQ, $time, $status){
+		// echo $id." ".$loaide." ".$numQ." ".$time." ".$status;
+		$update_query = "update categories set category_name='$loaide', time_quiz = '$time', num_question = '$numQ', status=$status where id='$id' ";
+		// echo $update_query;
 		if ($this->_con->query($update_query) === TRUE) {
 		    echo "ok";
 		} else {

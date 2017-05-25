@@ -20,7 +20,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
-
+<link href="css/my-css.css" rel="stylesheet">
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -38,6 +38,13 @@
 
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
+
+<link rel="stylesheet" href="css/switchery.css" />
+<script src="js/switchery.js"></script>
+<style>
+ table { table-layout: fixed; }
+ table th, table td { overflow: hidden; }
+</style>
 
 
 </head>
@@ -68,7 +75,7 @@
 			<li <?php if($uri == 'ques-management.php') echo "class='has-sub active'"; ?>><a href="ques-management.php"><i class="icon-help"></i><span class="title">Quản lý câu hỏi</span></a>
 				<ul class="nav">
 					<li <?php if($uri == 'ques-management.php') echo "class='active'"; ?>><a href="ques-management.php"><span class="title">Danh sách câu hỏi</span></a></li>
-					<li><a href=""><span class="title">Thêm câu hỏi</span></a></li>
+					<li><a href="insert-question.php"><span class="title">Thêm câu hỏi</span></a></li>
 				</ul>
 			</li>
 			<li <?php if($uri == 'exam-management.php') echo "class='active'"; ?>><a href="exam-management.php"><i class="icon-folder"></i><span class="title">Quản lý đề thi </span></a>

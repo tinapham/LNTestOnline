@@ -1,7 +1,5 @@
 <?php require_once 'messages.php';
 
-//site specific configuration declartion
-//define( 'BASE_PATH', 'http://localhost/php-quiz/');
 define( 'DB_HOST', 'localhost' );
 define( 'DB_USERNAME', 'root');
 define( 'DB_PASSWORD', '');
