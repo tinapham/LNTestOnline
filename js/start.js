@@ -5,19 +5,6 @@ $(document).ready(function() {
 		    form.submit();
 		},
 		rules : {
-			name : {
-				required : true,
-				minlength : 3,
-				remote : {
-					url : "check_name.php",
-					type : "post",
-					data : {
-						username : function() {
-							return $("#name").val();
-						}
-					}
-				}
-			},
 			category : {
 			    required : true
 			},
@@ -26,15 +13,15 @@ $(document).ready(function() {
 			}
 		},
 		messages : {
-			name : {
-				required : "Please enter your name",
-				remote : "Name is already taken, Please choose some other name"
-			},
 			category:{
+<<<<<<< HEAD
                 required : "Please choose your category to start Quiz"
            },
            num_questions : {
            	   required : "Please choose number of questions to be showed on each page"
+=======
+                required : "Hãy chọn môn thi để bắt đầu kiểm tra"
+>>>>>>> 573fbedbdaf90d7a8bd353c09926f23c5a616591
            }
 		},
 		errorPlacement : function(error, element) {

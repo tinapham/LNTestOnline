@@ -3,13 +3,16 @@ ob_start();
 session_start();
 require_once 'config.php'; 
 ?>
-<?php 
+<?php 	
+	ini_set('display_errors', 'off');
+    ini_set('log_errors', 'on');
+    ini_set('error_log','php-error.log');
 	if( !empty( $_POST )){
 		try {
 			$user_obj = new Cl_User();
 			$data = $user_obj->login( $_POST );
 			if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
-				$_SESSION['success'] = 'You are logged in successfully';
+				$_SESSION['success'] = 'Bạn đã đăng nhập thành công';
 				if($_SESSION['social_id']=='admin') {
 					header('Location: index-2.php'); exit;
 				} 
@@ -55,6 +58,7 @@ require_once 'config.php';
 
 <link href="css/mouldifi-forms.css" rel="stylesheet">
 
+<link href="css/login.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -73,33 +77,37 @@ require_once 'config.php';
 		<?php 
 		// require_once 'templates/message.php';
 		?>
-		<h2><strong>Welcome</strong>, please login</h2>
+		<h2><strong>Xin hãy đăng nhập</strong></h2>
+		<?php require_once 'template/message.php';  ?>
 		<form id="login-form" class="form-signin" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">                        
 			<div class="form-group">
 				<input name="email" id="email" type="email" placeholder="Email" class="form-control" autofocus>
 			</div>                        
 			<div class="form-group">
-				<input name="password" id="password" type="password" placeholder="Password" class="form-control">
+				<input name="password" id="password" type="password" placeholder="Mật khẩu" class="form-control">
 			</div>
 			<div class="form-group">
 				 <div class="checkbox checkbox-replace">
 					<input type="checkbox" id="remeber">
-					<label for="remeber">Remeber me</label>
+					<label for="remeber">Ghi nhớ</label>
 				  </div>
 			 </div>
 			<div class="form-group">
-				<button class="btn btn-primary btn-block bt-login">Login</button>
+				<button class="btn btn-primary btn-block bt-login">Đăng nhập</button>
 			</div>
-			<p class="text-center"><a href="forgot-password.php">Forgot your password | </a><a href="register.php">Sign Up</a></p>                     
+			<p class="text-center"><a href="forgot-password.php">Quên mật khẩu | </a><a href="register.php">Đăng ký</a></p>                 
 		</form>
 	</div>
 </div>
 <!--Load JQuery-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/login.js"></script>
+
 </body>
 
 <!-- Mirrored from g-axon.com/mouldifi-3.0/light/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 May 2017 08:24:49 GMT -->
 </html>
 <?php ob_end_flush(); ?>
-<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>    
+<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>   

@@ -27,7 +27,12 @@
 				<div class="panel-heading clearfix">
 					<h3 class="panel-title">Kết quả các lần thi</h3>
 					<ul class="panel-tool-options"> 
+<<<<<<< HEAD
 						<li><a href="insert-question.php" class="btn" data-toggle="modal" data-target="#insert"><span class="icon-plus"></span>Thêm câu hỏi</a></li>
+=======
+						<li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
+						<li><a class="btn" data-toggle="modal" data-target="#myModal"><span class="icon-plus"></span>Thêm câu hỏi</a></li>
+>>>>>>> 573fbedbdaf90d7a8bd353c09926f23c5a616591
 					</ul>
 				</div>
 				<div class="panel-body fulltable">

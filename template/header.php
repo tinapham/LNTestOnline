@@ -22,6 +22,7 @@ if(!isset($_SESSION['logged_in'])){
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
 <link href="css/my-css.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -42,6 +43,8 @@ if(!isset($_SESSION['logged_in'])){
 
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -93,7 +96,7 @@ if(!isset($_SESSION['logged_in'])){
 						<!-- User action menu -->
 						<ul class="dropdown-menu pull-right">
 						  
-							<li><a href="#/"><i class="icon-user"></i>Tài khoản của tôi</a></li>
+							<li><a href="account.php"><i class="icon-user"></i>Tài khoản của tôi</a></li>
 							<li class="divider"></li>
 							<li><a href="logout.php"><i class="icon-logout"></i>Đăng xuất</a></li>
 						</ul>

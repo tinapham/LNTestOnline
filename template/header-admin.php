@@ -1,10 +1,7 @@
 <?php 
 	ob_start();
 	session_start();
-	require_once 'config.php'; 
-	if(!isset($_SESSION['logged_in'])){
-		header('Location: index.php');
-	}
+	require_once 'permission.php'; 
 ?>
 <html>
 <head>
@@ -20,7 +17,11 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/mouldifi-core.css" rel="stylesheet">
 <link href="css/mouldifi-forms.css" rel="stylesheet">
+<<<<<<< HEAD
 <link href="css/my-css.css" rel="stylesheet">
+=======
+<link href="css/login.css" rel="stylesheet">
+>>>>>>> 573fbedbdaf90d7a8bd353c09926f23c5a616591
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -38,6 +39,7 @@
 
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
+<<<<<<< HEAD
 
 <link rel="stylesheet" href="css/switchery.css" />
 <script src="js/switchery.js"></script>
@@ -47,6 +49,9 @@
 </style>
 
 
+=======
+<script src="js/jquery.validate.min.js"></script>
+>>>>>>> 573fbedbdaf90d7a8bd353c09926f23c5a616591
 </head>
 <body>
 
@@ -104,7 +109,7 @@
 						<!-- User action menu -->
 						<ul class="dropdown-menu pull-right">
 						  
-							<li><a href="#/"><i class="icon-user"></i>Tài khoản của tôi</a></li>
+							<li><a href="account.php"><i class="icon-user"></i>Tài khoản của tôi</a></li>
 							<li class="divider"></li>
 							<li><a href="logout.php"><i class="icon-logout"></i>Đăng xuất</a></li>
 						</ul>

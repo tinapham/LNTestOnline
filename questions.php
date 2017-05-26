@@ -91,6 +91,9 @@
                     </div>
                 </div>';
                     $sttQues++;
+                    ini_set('display_errors', 'off');
+                    ini_set('log_errors', 'on');
+                    ini_set('error_log','php-error.log');
                 }?>
                 <div class="col-md-10 col-md-offset-1">
                     <button type="submit" class="btn btn-primary">Submit</button>

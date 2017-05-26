@@ -42,12 +42,13 @@
 										<option value="<?php echo $key; ?>"><?php echo $category; ?></option>
 										<?php } ?>
 									</select> 
+									<span class="help-block"></span>
 						 		</div>
 							</div>
 							<div class="line-dashed"></div>
 							<div class="form-group"> 
 								<div class="col-sm-offset-1 col-sm-10"> 
-									<button id="start_btn" class="btn btn-success btn-block" type="submit">Start!!!</button>
+									<button id="start_btn" class="btn btn-success btn-block" type="submit">Bắt đầu!!!</button>
 								</div>
 							</div>
 						</form>
@@ -56,6 +57,23 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	
 <?php require_once 'template/footer.php';?>
+=======
+</div>
+  <!-- /main container -->
+  
+</div>
+<!-- /page container -->
+
+<!--Load JQuery-->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/start.js"></script>	
+
+</body>
+</html>
+<?php ob_end_flush(); ?>
+<?php unset($_SESSION['success'] ); unset($_SESSION['error']);  ?>    
+>>>>>>> 573fbedbdaf90d7a8bd353c09926f23c5a616591
 	

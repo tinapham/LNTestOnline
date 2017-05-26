@@ -54,12 +54,7 @@
 									<td><?php echo $result['right_answer'];?></td>
 									<td><?php echo $result['wrong_answer'];?></td>
 									<td><?php echo $result['unanswered'];?></td>
-									<td><?php 
-										$right = (int) $result['right_answer'];
-										$total = $right+$result['wrong_answer']+$result['unanswered'];
-										if($total==0) echo 0; 
-										else echo round($right*10/$total , 1);
-									?></td>
+									<td><?php echo $result['mark'];?></td>
 								</tr>
 								<?php } ?>
 							</tbody>
