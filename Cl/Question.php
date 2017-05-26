@@ -9,6 +9,7 @@ class Cl_Question
 	{
 		$db = new Cl_DBclass();
 		$this->_con = $db->con;
+
 	}
 	
 	public function update($id,$question,$ch1,$ch2,$ch3,$ch4,$ch5,$ch6,$ans,$cate){
@@ -22,7 +23,18 @@ class Cl_Question
 		}
 
 		$this->_con->close();
+	}
 
-		
+	public function insert($question,$ch1,$ch2,$ch3,$ch4,$ch5,$ch6,$ans,$cate){
+		$query = "INSERT INTO questions (id,question_name, answer1, answer2, answer3, answer4, answer5, answer6, answer, category_id) VALUES (NULL, '$question', '$ch1', '$ch2', '$ch3', '$ch4', '$ch5', '$ch6', $ans, $cate)";
+		 // echo $query;
+		 	// mysql_query($this->_con,'SET NAMES "UTF-8"');
+			if(mysqli_query($this->_con, $query)){
+				mysqli_close($this->_con);
+
+				return true;
+			}
+		return false;
+
 	}
 }
