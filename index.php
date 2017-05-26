@@ -3,7 +3,10 @@ ob_start();
 session_start();
 require_once 'config.php'; 
 ?>
-<?php 
+<?php 	
+	ini_set('display_errors', 'off');
+    ini_set('log_errors', 'on');
+    ini_set('error_log','php-error.log');
 	if( !empty( $_POST )){
 		try {
 			$user_obj = new Cl_User();

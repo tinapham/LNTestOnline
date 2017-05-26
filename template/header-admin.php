@@ -35,8 +35,7 @@
 
 <!--ChartJs-->
 <script src="js/plugins/chartjs/Chart.min.js"></script>
-
-
+<script src="js/jquery.validate.min.js"></script>
 </head>
 <body>
 

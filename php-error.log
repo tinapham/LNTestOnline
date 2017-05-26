@@ -12,3 +12,179 @@
 [24-May-2017 15:30:52 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
 [24-May-2017 15:30:52 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
 [24-May-2017 15:30:52 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[24-May-2017 15:43:53 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[24-May-2017 15:43:53 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[24-May-2017 15:43:53 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[24-May-2017 15:43:53 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[24-May-2017 15:53:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header-admin.php on line 3
+[24-May-2017 15:53:29 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header-admin.php on line 3
+[24-May-2017 15:53:56 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:10:18 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:12:48 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:13:09 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:13:19 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:13:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:14:41 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:15:00 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:15:30 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:15:38 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:17:49 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:45:05 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 16:59:45 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 17:01:00 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 17:21:07 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 17:21:37 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[24-May-2017 17:23:21 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 08:58:01 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:01 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:58:02 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:02 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:58:03 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:03 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:58:11 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:11 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:58:15 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:15 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:58:18 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:58:18 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:59:03 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:59:03 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:59:04 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:59:04 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:59:09 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:59:09 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 08:59:12 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 08:59:12 Europe/Berlin] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 93
+[25-May-2017 09:00:42 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 09:00:59 Europe/Berlin] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 92
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:02:47 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:03:37 Europe/Berlin] PHP Notice:  Undefined variable: result in D:\xampp\htdocs\LNTestOnline\questions.php on line 87
+[25-May-2017 09:05:59 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:11:20 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:14:28 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:14:41 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:15:04 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:15:29 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:16:51 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:17:06 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:17:34 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:19:48 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:21:41 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:22:28 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:23:44 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:24:11 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:24:26 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:25:57 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:26:19 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:26:42 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:32:06 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:32:08 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:32:24 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:33:43 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:35:18 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:35:31 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:35:35 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:36:10 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:36:14 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:36:42 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:39:17 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:40:25 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:40:25 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:40:31 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:40:31 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:41:00 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:41:00 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:41:08 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:41:08 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:41:16 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:41:16 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:42:03 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:42:03 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:42:08 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:42:08 Europe/Berlin] PHP Notice:  Undefined index: confirm_password in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[25-May-2017 09:44:35 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:44:44 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:44:54 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:45:40 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:46:45 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[25-May-2017 09:48:28 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:17:00 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:17:07 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:17:17 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:18:06 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:18:32 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:18:53 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:21:49 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:25:54 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:31:42 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:32:56 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:33:16 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:34:42 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:34:57 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:36:43 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:36:46 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:36:49 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:37:14 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:37:19 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:41:22 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:41:23 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:41:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:42:08 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:43:57 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:44:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:44:30 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:44:35 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:44:39 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:44:43 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:53:24 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:53:24 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$password' (T_VARIABLE) in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[26-May-2017 03:53:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:54:30 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:54:30 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$password' (T_VARIABLE) in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[26-May-2017 03:54:56 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:55:00 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:55:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$password' (T_VARIABLE) in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[26-May-2017 03:55:41 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:55:47 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:55:47 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$password' (T_VARIABLE) in D:\xampp\htdocs\LNTestOnline\Cl\User.php on line 122
+[26-May-2017 03:55:49 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:56:38 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:56:42 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:56:58 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:59:45 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 03:59:52 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:02:25 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:04:37 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:05:18 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:05:47 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:06:45 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:12 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:19 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:24 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:33 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:43 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:07:48 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:10:36 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:05 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:27 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:32 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:40 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:46 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:11:50 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:12:30 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:12:34 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:12:39 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:12:45 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:13:09 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:13:32 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 04:13:38 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3

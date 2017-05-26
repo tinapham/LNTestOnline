@@ -9,8 +9,7 @@ if( isset( $_POST['password'] ) && !empty($_POST['password'])){
 	$email = $_POST['email'];
 	
 	if( !empty( $email) && !empty($password) ){
-		$query = " SELECT count(email) cnt FROM users where password = '$password' and email = '$email' ";
-		$result = mysqli_query($db->con, $query);
+		$query = " SELECT count(email) cnt FROM users where password = '$password' and email = '$email' ";= mysqli_query($db->con, $query);
 		$data = mysqli_fetch_assoc($result);
 		if($data['cnt'] == 1){
 			echo 'true';

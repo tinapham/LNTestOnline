@@ -8,7 +8,7 @@ define('USER_REGISTRATION_SUCCESS', 'Đăng ký thành công, bạn có thể đ
 define('LOGIN_FIELDS_MISSING', 'Email và Mật khẩu để trống');
 define('LOGIN_FAIL', 'Email và mật khẩu không trùng khớp');
 
-define('PASSOWRD_CHANAGE_SUCCESS', 'Mật khẩu thay đổi thành công');
+define('PASSWORD_CHANGE_SUCCESS', 'Mật khẩu thay đổi thành công');
 define('LOGOUT_SUCCESS', 'Bạn đã đăng xuất thành công');
 define('CHOOSE_CATEGORY', 'Hãy chọn đề thi');
 define('NO_CATEGORY', 'Không có đề thi để chọn, Hãy liên lạc với Nhà quản trị');

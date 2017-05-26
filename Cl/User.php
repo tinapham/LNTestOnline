@@ -46,7 +46,7 @@ class Cl_User
 			if (filter_var( $trimmed_data['email'], FILTER_VALIDATE_EMAIL)) {
 				$email = mysqli_real_escape_string( $this->_con, $trimmed_data['email']);
 			} else {
-				throw new Exception( "Please enter a valid email address!" );
+				throw new Exception( "Hãy nhập địa chỉ email chính xác!" );
 			}
 			
 			
@@ -118,20 +118,26 @@ class Cl_User
 			$trimmed_data = array_map('trim', $data);
 			
 			// escape variables for security
+			$current_password = mysqli_real_escape_string( $this->_con, $trimmed_data['old_password'] );
 			$password = mysqli_real_escape_string( $this->_con, $trimmed_data['password'] );
-			$cpassword = $trimmed_data['confirm_password'];
-			$user_id = $_SESSION['id'];
-			if((!$password) || (!$cpassword) ) {
+			if( $current_password =="" || $password ==""){
 				throw new Exception( FIELDS_MISSING );
 			}
-			if ($password !== $cpassword) {
-				throw new Exception( PASSWORD_NOT_MATCH );
-			}
-			$password = md5( $password );
-			$query = "UPDATE users SET password = '$password' WHERE id = '$user_id'";
-			if(mysqli_query($this->_con, $query)){
-				mysqli_close($this->_con);
-				return true;
+			$user_id = $_SESSION['id'];
+			$current_password = md5($current_password);
+			$query = "SELECT * FROM users WHERE id = '$user_id' and password = '$current_password'";
+			$result = mysqli_query($this->_con, $query);
+			$data = mysqli_fetch_assoc($result);
+			$count = mysqli_num_rows($result);
+			if( $count == 0){
+				throw new Exception( "Hãy nhập mật khẩu hiện tại chính xác" );
+			} else {
+				$password = md5( $password );
+				$query = "UPDATE users SET password = '$password' WHERE id = '$user_id'";
+				if(mysqli_query($this->_con, $query)){
+					mysqli_close($this->_con);
+					return true;
+				}
 			}
 		} else{
 			throw new Exception( FIELDS_MISSING );
@@ -222,7 +228,7 @@ class Cl_User
 	public function getResults()
 	{
 		$user_id = $_SESSION['id'];
-		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id AND `categories`.`id` = `scores`.`category_id` ORDER BY `scores`.`id` ASC";
+		$query = "SELECT `scores`.`id`,`categories`.`category_name`,`right_answer`,`wrong_answer`,`unanswered`,`mark` FROM `scores` JOIN `categories` WHERE `user_id`= $user_id AND `categories`.`id` = `scores`.`category_id` ORDER BY `scores`.`id` ASC";
 		$results = mysqli_query($this->_con, $query)  or die(mysqli_error());
 		$scores = array();
 		while ( $result = mysqli_fetch_assoc($results) ) {
