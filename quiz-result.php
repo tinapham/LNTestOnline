@@ -54,6 +54,16 @@
 									</div> 
 								</div>
 								<div class="line-dashed"></div>
+								<div class="form-group"> 
+									<label class="col-sm-2 control-label">Tổng điêm</label> 
+									<div class="col-sm-8"> 
+										<span class="form-control input-lg">
+										<?php echo isset($result['mark'])? $result['mark']:''; 
+										?>
+										</span> 
+									</div> 
+								</div>
+								<div class="line-dashed"></div>
 			     				<div class="col-sm-offset-4 col-xs-10 col-sm-5 col-md-5 col-lg-5">
 			     					<a href="quiz-results.php" class="btn btn-info btn-home">Xem kết quả thi trước</a>
 			     				</div>

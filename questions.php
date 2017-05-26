@@ -84,7 +84,7 @@
                                     </div>';
                     }
                     echo '<div class="radio radio-replace radio-success">
-                                        <input type="radio" checked="checked" style="display:none" value="smart_quiz" id="radio1_'.$result['id'].'" name="'.$result['id'].'"/>
+                                        <input type="radio" checked="checked" value="smart_quiz" id="radio-'.$res['id'].'" name="'.$res['id'].'"/>
                                     </div>';
                     echo '
                         </div>

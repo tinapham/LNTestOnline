@@ -211,7 +211,7 @@ class Cl_User
 	
 	public function getCategory()
 	{
-		$query = "SELECT * FROM `categories`";
+		$query = "SELECT * FROM `categories` WHERE status=1";
 		$results = mysqli_query($this->_con, $query)  or die(mysqli_error());
 		$categories = array();
 		while ( $result = mysqli_fetch_assoc($results) ) {
@@ -292,6 +292,8 @@ class Cl_User
 	}
 	public function getAnswers(array $data)
 	{
+		// var_dump($data);
+		// exit();
 		if( !empty( $data ) ){
 			$right_answer=0;
 			$wrong_answer=0;
@@ -313,11 +315,15 @@ class Cl_User
 					$wrong_answer++;
 				}
 			}
+			$mark=$right_answer*10/($right_answer+$unanswered+$wrong_answer);
 			$results = array();
 			$results['right_answer'] = $right_answer;
 			$results['wrong_answer'] = $wrong_answer;
 			$results['unanswered'] = $unanswered;
-			$update_query = "update scores set right_answer='$right_answer', wrong_answer = '$wrong_answer', unanswered = '$unanswered' where user_id='$user_id' and id ='$score_id' ";
+			$results['mark'] = $mark;
+			// echo "fghj".$right_answer." ".$unanswered." ".$wrong_answer." ".$mark;
+			// exit();
+			$update_query = "update scores set right_answer='$right_answer', wrong_answer = '$wrong_answer', unanswered = '$unanswered', mark='$mark' where user_id='$user_id' and id ='$score_id' ";
 			mysqli_query( $this->_con, $update_query)   or die(mysqli_error());
 			mysqli_close($this->_con);
 			return $results;
