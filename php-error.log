@@ -188,3 +188,5 @@
 [26-May-2017 04:13:09 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
 [26-May-2017 04:13:32 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
 [26-May-2017 04:13:38 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 05:36:15 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
+[26-May-2017 05:36:21 Europe/Berlin] PHP Notice:  A session had already been started - ignoring session_start() in D:\xampp\htdocs\LNTestOnline\template\header.php on line 3
